@@ -1,0 +1,153 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Comic Sans MS", system-ui, sans-serif;
+  color: #fff;
+  background: linear-gradient(160deg, #2b5cff 0%, #3d7bff 45%, #ffd93b 100%);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---------- Ghost ---------- */
+.ghost {
+  width: 120px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 40, 0.25));
+}
+
+.ghost-shadow {
+  width: 70px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 40, 0.2);
+  animation: shadow 3s ease-in-out infinite;
+  margin-top: -14px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes shadow {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(0.75); opacity: 0.35; }
+}
+
+/* ---------- Text ---------- */
+h1 {
+  font-size: clamp(1.3rem, 4.5vw, 2rem);
+  line-height: 1.35;
+  margin: 8px 0 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 60, 0.35);
+}
+
+p.message {
+  font-size: clamp(1.1rem, 3.8vw, 1.5rem);
+  line-height: 1.55;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 20px 22px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 4px rgba(0, 0, 60, 0.35);
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 340px;
+  margin-top: 8px;
+}
+
+.btn {
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #1c2b66;
+  background: #fff;
+  box-shadow: 0 6px 0 rgba(0, 0, 60, 0.25);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+}
+
+.btn:hover { background: #fff6c9; }
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 60, 0.25);
+}
+
+.btn:disabled { opacity: 0.7; cursor: wait; }
+
+/* The runaway button: moves with JS once the cursor gets close */
+.btn.runaway {
+  transition: left 0.18s ease-out, top 0.18s ease-out;
+}
+
+.btn-slot {
+  /* keeps the layout from collapsing when the button goes fixed */
+  height: 52px;
+  position: relative;
+}
+
+.btn-slot .btn { width: 100%; }
+
+/* ---------- Bouquet ---------- */
+.bouquet {
+  font-size: clamp(3.2rem, 14vw, 5.5rem);
+  line-height: 1;
+  animation: sway 3.5s ease-in-out infinite;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 60, 0.25));
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+.sparkles span {
+  position: fixed;
+  font-size: 1.4rem;
+  animation: twinkle 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.back {
+  color: #fff;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
