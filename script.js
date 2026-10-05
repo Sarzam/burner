@@ -4,7 +4,7 @@
    2. They email you an "Access Key" - paste it below.
    Emails from the site will then land in that inbox.
 ------------------------------------------------------------------- */
-const WEB3FORMS_ACCESS_KEY = "PASTE_YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "496b3445-5ad7-48c5-9b35-d6b779fd808f";
 
 /* ---------- Send email + navigate ---------- */
 function notifyAndGo(buttonNumber, href) {
