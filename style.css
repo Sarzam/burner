@@ -8,9 +8,8 @@ html, body {
 body {
   min-height: 100vh;
   font-family: "Trebuchet MS", "Comic Sans MS", system-ui, sans-serif;
-  color: #fff;
-  background: linear-gradient(160deg, #2b5cff 0%, #3d7bff 45%, #ffd93b 100%);
-  background-attachment: fixed;
+  color: #5a2a45;
+  background: #f8c8dc; /* baby pink */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,18 +59,17 @@ h1 {
   font-size: clamp(1.3rem, 4.5vw, 2rem);
   line-height: 1.35;
   margin: 8px 0 0;
-  text-shadow: 0 2px 6px rgba(0, 0, 60, 0.35);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 p.message {
   font-size: clamp(1.1rem, 3.8vw, 1.5rem);
   line-height: 1.55;
   margin: 0;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.55);
   padding: 20px 22px;
   border-radius: 20px;
   backdrop-filter: blur(4px);
-  text-shadow: 0 1px 4px rgba(0, 0, 60, 0.35);
 }
 
 /* ---------- Buttons ---------- */
@@ -147,7 +145,7 @@ p.message {
 }
 
 .back {
-  color: #fff;
+  color: #5a2a45;
   font-size: 0.95rem;
   opacity: 0.85;
 }
